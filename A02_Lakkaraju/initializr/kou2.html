@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1 id='result'>Sports Buy</h1>
+</center>
+<form id="FORM" method="post" action="#" name="FORM">
+<u><h3>Utilites:</h3></u>
+<table style="width:100%">
+  <tr>
+    <th><u>Cricket utilites</u></th>
+    <th><u>Cost</u></th>
+    <th><u>Quantity</u></th>
+    
+    <th><u>Tennis utilites</u></th>
+    <th><u>Cost</u></th>
+    <th><u>Quantity</u></th>
+    <th><u>FootBall utilites</u></th>
+    <th><u>Cost</u></th>
+    <th><u>Quantity</u></th>
+  </tr>
+  <tr>
+    <td>Total Kit:</td>
+    <td>5.5$</td>
+    <td><input type="text" name="Tkit" id="Tkit" ></td>
+    <td>Total Kit:</td>
+    <td>4$</td>
+    <td><input type="text" name="Tkit1" id="Tkit1"></td>
+    <td>Total Kit:</td>
+    
+   <td>5.5$</td>
+    <td><input type="text" name="Tkit2" id="Tkit2"></td>
+    
+  </tr>
+  <tr>
+    <td>Bat:</td>
+    <td>2$</td>
+    <td><input type="text" name="BAT" id="BAT"></td>
+    <td>Tennis Rackets:</td>
+    <td>1$</td>
+    <td><input type="text" name="BAT1" id="BAT1"></td>
+    <td>balls:</td>
+    <td>2$</td>
+    <td><input type="text" name="BAT2" id="BAT2"></td>
+  </tr>
+  <tr>
+    <td>Balls:</td>
+    <td>1$</td>
+    <td><input type="text" name="Ball" id="Ball"></td>
+    <td>Balls:</td>
+    <td>1$</td>
+    <td><input type="text" name="Ball1" id="Ball1"></td>
+    <td>Nets:</td>
+    <td>2.5$</td>
+    <td><input type="text" name="Ball2" id="Ball2"></td>
+  </tr>
+</table>
+<center>
+<input type="button" id="button"onclick="Function1()" value="Submit">
+</center>
+</form>
+<script>
+function Function1(){
+  var Tkit=document.getElementById('Tkit').value;
+       
+          var Tkit1=document.getElementById("Tkit1").value;
+             var Tkit2=document.getElementById("Tkit2").value;
+var BAT=document.getElementById('BAT').value;
+       
+          var BAT1=document.getElementById("BAT1").value;
+             var BAT2=document.getElementById("BAT2").value;
+              var Ball=document.getElementById("Ball").value;
+              var Ball1=document.getElementById("Ball1").value;
+              var Ball2=document.getElementById("Ball2").value;
+              var total=parseInt(Tkit)*5.5+parseInt(Tkit1)*4+parseInt(Tkit2)*5.5+parseInt(BAT)*2+parseInt(BAT1)*1+parseInt(BAT2)*2 +parseInt(Ball)*1 +parseInt(Ball1)*1 +parseInt(Ball2)*2.5;
+              document.getElementById("FORM").submit();
+              if (validation())
+              {
+                 document.getElementById("result").innerHTML = "You have entered " + Tkit;
+                alert(" Total : " + total+ "\n\n Form Submitted Successfully......");
+              }
+}
+function validation() {
+var Tkit=document.getElementById("Tkit").value;
+          var Tkit1=document.getElementById("Tkit1").value;
+             var Tkit2=document.getElementById("Tkit2").value;
+            var BAT=document.getElementById('BAT').value;
+       
+          var BAT1=document.getElementById("BAT1").value;
+             var BAT2=document.getElementById("BAT2").value;
+             var Ball=document.getElementById('Ball').value;
+       
+          var Ball1=document.getElementById("Ball1").value;
+             var Ball2=document.getElementById("Ball2").value;
+             if (Tkit === ''|| Tkit1 === '' || Tkit2 ===''|| BAT===''|| BAT1===''|| BAT2===''|| Ball===''|| Ball1=== '' || Ball2==='') {
+alert("Fill the fields");
+return false;
+} 
+else if (isNaN(Tkit)) {
+    alert("only numeric allowed in quantity");
+
+return false;
+} 
+return true;
+
+
+
+}
+</script>
+</body>
+</html>
